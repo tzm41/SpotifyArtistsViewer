@@ -13,6 +13,10 @@
 		3B8094631D108CD800ECC85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8094621D108CD800ECC85A /* Assets.xcassets */; };
 		3B8094661D108CD800ECC85A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B8094641D108CD800ECC85A /* LaunchScreen.storyboard */; };
 		3B8094711D108CD800ECC85A /* SpotifyArtistsViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8094701D108CD800ECC85A /* SpotifyArtistsViewerTests.swift */; };
+		3B80947E1D109A1200ECC85A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80947D1D109A1200ECC85A /* SearchViewController.swift */; };
+		3BE9B7461D10A47000D66328 /* ArtistTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9B7451D10A47000D66328 /* ArtistTabelViewCell.swift */; };
+		3BE9B74A1D10A7C700D66328 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9B7491D10A7C700D66328 /* SpotifyService.swift */; };
+		3BE9B74D1D10A80C00D66328 /* SpotifyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9B74C1D10A80C00D66328 /* SpotifyItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B8094581D108CD800ECC85A /* SpotifyArtistsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyArtistsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8094581D108CD800ECC85A /* SAViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B80945B1D108CD800ECC85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B80945D1D108CD800ECC85A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B8094601D108CD800ECC85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		3B80946C1D108CD800ECC85A /* SpotifyArtistsViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyArtistsViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8094701D108CD800ECC85A /* SpotifyArtistsViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyArtistsViewerTests.swift; sourceTree = "<group>"; };
 		3B8094721D108CD800ECC85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B80947D1D109A1200ECC85A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3BE9B7451D10A47000D66328 /* ArtistTabelViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTabelViewCell.swift; sourceTree = "<group>"; };
+		3BE9B7491D10A7C700D66328 /* SpotifyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
+		3BE9B74C1D10A80C00D66328 /* SpotifyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +76,7 @@
 		3B8094591D108CD800ECC85A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B8094581D108CD800ECC85A /* SpotifyArtistsViewer.app */,
+				3B8094581D108CD800ECC85A /* SAViewer.app */,
 				3B80946C1D108CD800ECC85A /* SpotifyArtistsViewerTests.xctest */,
 			);
 			name = Products;
@@ -77,12 +85,11 @@
 		3B80945A1D108CD800ECC85A /* SpotifyArtistsViewer */ = {
 			isa = PBXGroup;
 			children = (
-				3B80945B1D108CD800ECC85A /* AppDelegate.swift */,
-				3B80945D1D108CD800ECC85A /* ViewController.swift */,
-				3B80945F1D108CD800ECC85A /* Main.storyboard */,
-				3B8094621D108CD800ECC85A /* Assets.xcassets */,
-				3B8094641D108CD800ECC85A /* LaunchScreen.storyboard */,
-				3B8094671D108CD800ECC85A /* Info.plist */,
+				3BE9B74B1D10A7FC00D66328 /* Models */,
+				3BE9B7481D10A79B00D66328 /* Networking */,
+				3BE9B7471D10A4D500D66328 /* View Controllers */,
+				3B80947C1D108DDA00ECC85A /* View */,
+				3B80947B1D108DC900ECC85A /* Supporting Files */,
 			);
 			path = SpotifyArtistsViewer;
 			sourceTree = "<group>";
@@ -94,6 +101,51 @@
 				3B8094721D108CD800ECC85A /* Info.plist */,
 			);
 			path = SpotifyArtistsViewerTests;
+			sourceTree = "<group>";
+		};
+		3B80947B1D108DC900ECC85A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B80945B1D108CD800ECC85A /* AppDelegate.swift */,
+				3B8094641D108CD800ECC85A /* LaunchScreen.storyboard */,
+				3B8094621D108CD800ECC85A /* Assets.xcassets */,
+				3B8094671D108CD800ECC85A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B80947C1D108DDA00ECC85A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B80945F1D108CD800ECC85A /* Main.storyboard */,
+				3BE9B7451D10A47000D66328 /* ArtistTabelViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3BE9B7471D10A4D500D66328 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B80947D1D109A1200ECC85A /* SearchViewController.swift */,
+				3B80945D1D108CD800ECC85A /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3BE9B7481D10A79B00D66328 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9B7491D10A7C700D66328 /* SpotifyService.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		3BE9B74B1D10A7FC00D66328 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BE9B74C1D10A80C00D66328 /* SpotifyItem.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +165,7 @@
 			);
 			name = SpotifyArtistsViewer;
 			productName = SpotifyArtistsViewer;
-			productReference = 3B8094581D108CD800ECC85A /* SpotifyArtistsViewer.app */;
+			productReference = 3B8094581D108CD800ECC85A /* SAViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3B80946B1D108CD800ECC85A /* SpotifyArtistsViewerTests */ = {
@@ -146,6 +198,7 @@
 				TargetAttributes = {
 					3B8094571D108CD800ECC85A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = THP5EV5EJ9;
 					};
 					3B80946B1D108CD800ECC85A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -197,6 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE9B74D1D10A80C00D66328 /* SpotifyItem.swift in Sources */,
+				3BE9B74A1D10A7C700D66328 /* SpotifyService.swift in Sources */,
+				3BE9B7461D10A47000D66328 /* ArtistTabelViewCell.swift in Sources */,
+				3B80947E1D109A1200ECC85A /* SearchViewController.swift in Sources */,
 				3B80945E1D108CD800ECC85A /* ViewController.swift in Sources */,
 				3B80945C1D108CD800ECC85A /* AppDelegate.swift in Sources */,
 			);
@@ -329,10 +386,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpotifyArtistsViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colintan.SpotifyArtistsViewer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SAViewer;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -340,10 +400,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpotifyArtistsViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colintan.SpotifyArtistsViewer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SAViewer;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -390,6 +453,7 @@
 				3B8094771D108CD800ECC85A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B8094781D108CD800ECC85A /* Build configuration list for PBXNativeTarget "SpotifyArtistsViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +462,7 @@
 				3B80947A1D108CD800ECC85A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

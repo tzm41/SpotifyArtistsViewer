@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spotify_Logo_RGB_Green" translatesAutoresizingMaskIntoConstraints="NO" id="rmt-LM-omi">
+                                <rect key="frame" x="182" y="211" width="236" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="Zmr-LK-oCU"/>
+                                    <constraint firstAttribute="width" constant="236" id="a0d-WH-mgV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rca-ou-my5">
+                                <rect key="frame" x="209" y="362" width="183" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.2118270099" green="0.82503080370000004" blue="0.46726459259999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rca-ou-my5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6Mk-mq-bXK"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rca-ou-my5" secondAttribute="bottom" constant="200" id="Mz4-sj-guO"/>
+                            <constraint firstItem="rca-ou-my5" firstAttribute="top" secondItem="rmt-LM-omi" secondAttribute="bottom" constant="80" id="Yaw-e4-aE1"/>
+                            <constraint firstItem="rca-ou-my5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="80" id="bfJ-1b-mZB"/>
+                            <constraint firstItem="rmt-LM-omi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dcq-fp-BdB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mz4-sj-guO"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +51,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Spotify_Logo_RGB_Green" width="567" height="170"/>
+    </resources>
 </document>
