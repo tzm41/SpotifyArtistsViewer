@@ -9,7 +9,7 @@
 import Foundation
 
 enum GetArtistResponse {
-    case Success([SpotifyItem])
+    case Success([Artist])
     case Failure(ErrorType)
 }
 
@@ -26,11 +26,11 @@ class SpotifyService {
         return session
     }()
 
-    func sendRequest(query: String, searchType: ItemType) {
+    func getArtistWithQuery(query: String, completion: (GetArtistResponse) -> Void) {
         let basePath = "https://api.spotify.com/v1/search"
         let queryItems: [NSURLQueryItem] = [
             NSURLQueryItem(name: "q", value: query),
-            NSURLQueryItem(name: "type", value: searchType.string)
+            NSURLQueryItem(name: "type", value: "Artist")
         ]
         let urlComponents = NSURLComponents(string: basePath)
         urlComponents?.queryItems = queryItems
@@ -41,17 +41,20 @@ class SpotifyService {
         request.HTTPMethod = "GET"
 
         /* Start a new Task */
-        let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-            if (error == nil) {
-                // Success
-                let statusCode = (response as! NSHTTPURLResponse).statusCode
-                print("URL Session Task Succeeded: HTTP \(statusCode)")
+        let task = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+            var result: GetArtistResponse
+            
+            if let error = error {
+                result = GetArtistResponse.Failure(error)
+            } else if let data = data {
+                result = GetArtistResponse.Success(SpotifyItem.artistsFromJSON(data))
+            } else {
+                result = GetArtistResponse.Success([Artist]())
             }
-            else {
-                // Failure
-                print("URL Session Task Failed: %@", error!.localizedDescription);
+            dispatch_async(dispatch_get_main_queue()) {
+                completion(result)
             }
-        })
+        }
         task.resume()
     }
 
