@@ -37,6 +37,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="B98-Vm-M03" kind="showDetail" id="9El-zS-qZG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -124,7 +127,7 @@
         <!--Split View Controller-->
         <scene sceneID="SEx-rX-qQN">
             <objects>
-                <splitViewController id="TSu-HM-uu8" sceneMemberID="viewController">
+                <splitViewController id="TSu-HM-uu8" customClass="SplitViewController" customModule="SAViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="jlF-oY-zQQ" kind="relationship" relationship="masterViewController" id="fip-Sb-c5w"/>
                         <segue destination="B98-Vm-M03" kind="relationship" relationship="detailViewController" id="52m-EY-I3j"/>
@@ -156,4 +159,7 @@
             <point key="canvasLocation" x="202" y="1975"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="52m-EY-I3j"/>
+    </inferredMetricsTieBreakers>
 </document>
