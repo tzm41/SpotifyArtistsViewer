@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B448D1F1D13458A0059C1F4 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B448D1E1D13458A0059C1F4 /* Image.swift */; };
 		3B448D211D134B3B0059C1F4 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B448D201D134B3B0059C1F4 /* SplitViewController.swift */; };
+		3B448D231D134C550059C1F4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B448D221D134C550059C1F4 /* DetailViewController.swift */; };
 		3B80945C1D108CD800ECC85A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80945B1D108CD800ECC85A /* AppDelegate.swift */; };
 		3B80945E1D108CD800ECC85A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80945D1D108CD800ECC85A /* ViewController.swift */; };
 		3B8094611D108CD800ECC85A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B80945F1D108CD800ECC85A /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		3B448D1E1D13458A0059C1F4 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3B448D201D134B3B0059C1F4 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		3B448D221D134C550059C1F4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3B8094581D108CD800ECC85A /* SAViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B80945B1D108CD800ECC85A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B80945D1D108CD800ECC85A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				3B80947D1D109A1200ECC85A /* SearchViewController.swift */,
 				3B80945D1D108CD800ECC85A /* ViewController.swift */,
 				3B448D201D134B3B0059C1F4 /* SplitViewController.swift */,
+				3B448D221D134C550059C1F4 /* DetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				3B80947E1D109A1200ECC85A /* SearchViewController.swift in Sources */,
 				3B80945E1D108CD800ECC85A /* ViewController.swift in Sources */,
 				3B80945C1D108CD800ECC85A /* AppDelegate.swift in Sources */,
+				3B448D231D134C550059C1F4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

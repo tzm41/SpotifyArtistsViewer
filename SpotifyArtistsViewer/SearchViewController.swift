@@ -27,8 +27,17 @@ class SearchViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableHeaderView = searchController.searchBar
-        
-//        SpotifyService.sharedService.sendRequest("Muse", searchType: ItemType.Artist)
+    }
+    
+    // MARK: Segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let artist = artistSearchResult[indexPath.row]
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                controller.detailArtist = artist
+            }
+        }
     }
 }
 
@@ -58,7 +67,7 @@ extension SearchViewController: UISearchResultsUpdating {
     }
     
     private func getSpotifyContentForQuery(query: String) {
-        SpotifyService.sharedService.getArtistWithQuery(query) { response in
+        SpotifyService.sharedService.getArtistsWithQuery(query) { response in
             switch response {
             case .Failure(let error):
                 print("Error fecthing items: \(error)")
