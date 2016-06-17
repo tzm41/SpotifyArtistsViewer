@@ -35,7 +35,7 @@ class SpotifyService {
     }()
 
     func getArtistsWithQuery(query: String, completion: (GetArtistResponse) -> Void) {
-        guard let request = requestFromQuery(query, type: "artists") else { return }
+        guard let request = requestFromQuery(query, type: "artist") else { return }
 
         let task = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             var result: GetArtistResponse
@@ -55,7 +55,7 @@ class SpotifyService {
     }
 
     func getAlbumsWithQuery(query: String, completion: (GetAlbumResponse) -> Void) {
-        guard let request = requestFromQuery(query, type: "albums") else { return }
+        guard let request = requestFromQuery(query, type: "album") else { return }
         
         let task = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             var result: GetAlbumResponse
@@ -75,7 +75,7 @@ class SpotifyService {
     }
     
     func getTracksWithQuery(query: String, completion: (GetTrackResponse) -> Void) {
-        guard let request = requestFromQuery(query, type: "tracks") else { return }
+        guard let request = requestFromQuery(query, type: "track") else { return }
         
         let task = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             var result: GetTrackResponse

@@ -21,11 +21,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArtistTabelViewCell" textLabel="Rus-Al-t2m" rowHeight="75" style="IBUITableViewCellStyleDefault" id="IyE-J5-eoH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" textLabel="Rus-Al-t2m" rowHeight="75" style="IBUITableViewCellStyleDefault" id="IyE-J5-eoH">
                                         <rect key="frame" x="0.0" y="92" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IyE-J5-eoH" id="Xw1-Dz-SnX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rus-Al-t2m">

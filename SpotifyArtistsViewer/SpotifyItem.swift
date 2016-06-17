@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum ItemType {
+    case Artist
+    case Album
+    case Track
+}
+
 struct SpotifyItem {
     static func artistsFromJSON(jsonData: NSData) -> [Artist] {
         do {
