@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TSu-HM-uu8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TSu-HM-uu8">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Search-->
@@ -14,25 +15,24 @@
                         <viewControllerLayoutGuide type="bottom" id="8qr-l7-W0x"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sSO-0C-gt7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vJE-Qc-nro">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" textLabel="Rus-Al-t2m" rowHeight="75" style="IBUITableViewCellStyleDefault" id="IyE-J5-eoH">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="75"/>
+                                        <frame key="frameInset" minY="92" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IyE-J5-eoH" id="Xw1-Dz-SnX">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                            <frame key="frameInset" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rus-Al-t2m">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="74.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="74.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -48,7 +48,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vJE-Qc-nro" firstAttribute="bottom" secondItem="8qr-l7-W0x" secondAttribute="top" id="1cF-yG-zf8"/>
                             <constraint firstItem="vJE-Qc-nro" firstAttribute="top" secondItem="sSO-0C-gt7" secondAttribute="top" id="MzQ-5i-Wwq"/>
@@ -74,24 +74,34 @@
                         <viewControllerLayoutGuide type="bottom" id="CGz-wb-GoF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TPG-jt-P32">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-VY-fly">
-                                <rect key="frame" x="180" y="74" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="CWZ-Xn-kjm"/>
                                     <constraint firstAttribute="height" constant="240" id="nkV-CG-ghb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yf8-tc-7MC">
-                                <rect key="frame" x="278" y="329" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zT0-TT-dRU">
+                                <frame key="frameInset" minX="20" minY="358" width="560" height="350.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">API temporarily unavailable! Muse are an English rock band from Teignmouth, Devon, formed in 1994. The band consists of Matt Bellamy (lead vocals, guitar, piano, keyboards), Chris Wolstenholme (bass guitar, backing vocals) and Dominic Howard (drums, percussion).
+
+Muse released their debut album, Showbiz, in 1999, showcasing an aggressive and melancholic alternative rock style. Their second album, Origin of Symmetry (2001), expanded their sound, combining Bellamy's falsetto, heavier riffs, wider instrumentation, and romantic classical influences. It earned them mainstream European success and a reputation for energetic live performances. Their third album, Absolution (2003), saw further classical influences, incorporating orchestra on tracks such as "Butterflies and Hurricanes", and brought American success, producing hit singles including "Time is Running Out".
+
+Muse's fourth album, Black Holes and Revelations (2006), incorporated electronic and pop elements, influenced by 1980s groups such as Depeche Mode, and produced successful singles such as "Supermassive Black Hole". The Resistance (2009) and The 2nd Law (2012) explore lyrical themes of government oppression and uprising and cemented Muse as one of the world's major stadium acts. Their seventh album, Drones (2015), is a concept album about drone warfare and returned to a harder rock sound.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dYs-VY-fly" firstAttribute="top" secondItem="MXl-Z8-ltU" secondAttribute="bottom" constant="10" id="6O2-Ta-MIB"/>
                             <constraint firstItem="yf8-tc-7MC" firstAttribute="top" secondItem="dYs-VY-fly" secondAttribute="bottom" constant="15" id="8zb-Mp-eE8"/>
@@ -117,7 +127,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.2118270099" green="0.82503080370000004" blue="0.46726459259999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.19607846438884735" green="0.80392158031463623" blue="0.39215677976608276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -150,7 +160,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.2118270099" green="0.82503080370000004" blue="0.46726459259999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.19607846438884735" green="0.80392158031463623" blue="0.39215677976608276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
