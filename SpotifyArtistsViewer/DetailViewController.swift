@@ -12,24 +12,9 @@ class DetailViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
 
-    var detailArtist: Artist? {
-        didSet {
-            configureView()
-        }
-    }
-
-    var detailAlbum: Album? {
-        didSet {
-            configureView()
-        }
-    }
-
-    var detailTrack: Track? {
-        didSet {
-            configureView()
-        }
-    }
-
+    var detailArtist: Artist?
+    var detailAlbum: Album?
+    var detailTrack: Track?
     var displayType: ItemType = .Artist
 
     private func configureView() {
@@ -62,6 +47,9 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         configureView()
     }
 }
