@@ -84,10 +84,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             let item = artistSearchResult[indexPath.row]
             cell.textLabel?.text = item.name
             cell.imageView?.image = item.images.last?.imageContent
+            cell.imageView?.layer.cornerRadius = 10
+            cell.imageView?.layer.masksToBounds = true
         case .Album:
             let item = albumSearchResult[indexPath.row]
             cell.textLabel?.text = item.name
             cell.imageView?.image = item.images.last?.imageContent
+            cell.imageView?.layer.cornerRadius = 10
+            cell.imageView?.layer.masksToBounds = true
         case .Track:
             let item = trackSearchResult[indexPath.row]
             cell.textLabel?.text = item.name
