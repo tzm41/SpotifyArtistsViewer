@@ -15,3 +15,5 @@ List
    3. [Core Technology #2](#core-technology-2)
    4. [Third Party Libraries](#third-party-libraries)
 9. [History](#history)
+
+Hot fix
