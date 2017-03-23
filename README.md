@@ -1,5 +1,5 @@
 # SpotifyArtistsViewer
-Mini iOS Project 3
+Mini iOS Project 3 Release
 
 List
 1. [Building](#building)
